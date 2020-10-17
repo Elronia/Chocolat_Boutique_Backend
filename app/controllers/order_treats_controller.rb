@@ -1,0 +1,2 @@
+class OrderTreatsController < ApplicationController
+end
