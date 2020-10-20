@@ -31,6 +31,6 @@ class OrderTreatsController < ApplicationController
 
     private
     def order_treat_params
-        params.permit(:order_id, :treat_id, :quantity)
+        params.permit(:quantity, :order_id, :treat_id)
     end
 end
