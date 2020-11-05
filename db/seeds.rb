@@ -17,8 +17,18 @@ Treat.reset_pk_sequence
 Order.reset_pk_sequence
 OrderTreat.reset_pk_sequence
 
-user01 = User.create(username: "katherine", password: "abc123")
-user02 = User.create(username: "manny", password: "abc123")
+user01 = User.create(
+    username: "katherine", 
+    password: "abc123",
+    first_name: "Ekaterina",
+    last_name: "Zarudnaya",
+    address: "1577 E 17th Street",
+    city: "Brooklyn",
+    state: "NY",
+    zip: 11230,
+    phone: "212-777-7777",
+    email: "katherine@gmail.com")
+
 
 # Treat Attributes
 # :name (string)
