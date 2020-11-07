@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_11_05_145428) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "total"
-    t.boolean "paid"
+    t.boolean "paid", default: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
