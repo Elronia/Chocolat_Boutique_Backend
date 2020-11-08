@@ -25,7 +25,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 gem 'activerecord-reset-pk-sequence'
+# For serializer use (allowing you to structure JSON key-value pairs according to how you want the info to be sent out)
 gem 'active_model_serializers'
+# For stripe
+gem 'stripe'
+gem 'dotenv'
+# For JWT auth
+gem 'jwt'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

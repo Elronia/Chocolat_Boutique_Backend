@@ -1,31 +1,24 @@
 class UsersController < ApplicationController
+
     def login
-        user = User.find_by(username: params[:username])
-        if user && user.authenticate(params[:password])
-            render json: user
+        @user = User.find_by(username: params[:username])
+        # If the user could be found by username and the password is correct, we create a token from the user's id. We then send back the user and the token
+        if @user && @user.authenticate(params[:password])
+            encode_token({user_id: @user.id})
+            render json: @user
         else
-            render json: {message: "Incorrect login info! Please try again"}
+            render json: {error: "Invalid Username Or Password"}, status: 422
         end
     end
 
-    # def login
-    #     @user = User.find_by(username: params[:username])
-    
-    #     # If the user could be found by username and the password is correct, we create a token ffrom the user's id. We then send back the user and the token
-    #     if @user && @user.authenticate(params[:password])
-    #       token = encode_token({user_id: @user.id})
-    
-    #       # Use UserSerializer.new() to ensure that user object returned is formatted with all the attributes we specified in user_serializer
-    #       render json: { user: UserSerializer.new(@user), token: token }
-    #     else
-    #       render json: {error: 'Invalid Username Or Password'}
-    #     end
-    # end
-
-    # def create
-    #     byebug
-    #     User.create(username:params[:username])
-    # end
+    def create
+        # byebug
+        @user = User.create(user_params)
+        if @user.valid?
+            render json: @user
+        else
+            render json: {error: "Invalid user"}, status: 422
+    end
 
     def index
         users = User.all
