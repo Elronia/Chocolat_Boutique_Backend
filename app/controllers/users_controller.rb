@@ -4,20 +4,30 @@ class UsersController < ApplicationController
         @user = User.find_by(username: params[:username])
         # If the user could be found by username and the password is correct, we create a token from the user's id. We then send back the user and the token
         if @user && @user.authenticate(params[:password])
-            encode_token({user_id: @user.id})
-            render json: @user
+            token = encode_token({user_id: @user.id})
+            render json: {
+                # Use UserSerializer.new() to ensure that user object returned is formatted with all the attributes we specified in user_serializer
+                user: UserSerializer.new(@user), 
+                token: token
+            }
         else
             render json: {error: "Invalid Username Or Password"}, status: 422
         end
     end
 
+    # Creating a new user based on params passed in, if valid, create a token for the user to log them in, render out the user and the token
     def create
         # byebug
         @user = User.create(user_params)
         if @user.valid?
-            render json: @user
+            token = encode_token({user_id: @user.id})
+            render json: {
+                user: UserSerializer.new(@user), 
+                token: token
+            }
         else
             render json: {error: "Invalid user"}, status: 422
+        end
     end
 
     def index

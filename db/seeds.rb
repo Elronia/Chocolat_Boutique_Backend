@@ -19,7 +19,7 @@ OrderTreat.reset_pk_sequence
 
 user01 = User.create(
     username: "katherine", 
-    password: "abc123",
+    password: "abc123",#$2a$12$8RkmJ7ycgrQGUSTk033tNuXsNLf1Mb4.TK6i/OKyVVhnla3qZaVdO
     first_name: "Ekaterina",
     last_name: "Zarudnaya",
     address: "1577 E 17th Street",

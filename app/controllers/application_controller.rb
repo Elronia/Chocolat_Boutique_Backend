@@ -38,6 +38,7 @@ class ApplicationController < ActionController::API
     def authorized
         render json: { error: 'Please log in' }, status: :unauthorized unless logged_in?
     end
+    
 
     def checkout
         new_order = Order.create(
@@ -57,5 +58,4 @@ class ApplicationController < ActionController::API
         render json: params
     end
 
-    
 end
