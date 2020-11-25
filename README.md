@@ -33,6 +33,18 @@ Boutique de Chocolat is an e-commerce application that allows users to purchase 
 * There are 4 models with `has_many`, `belongs_to` and `has_many through` associations
 ### Domain Model
 <img src='./image/Chocolat_ERD.png'> </img>
+## Tech Stack
+* React (Frontend: https://github.com/Elronia/Chocolat_Boutique_Frontend)
+* Ruby on Rails API (Backend)
+* PostgreSQL
+* Active Record
+* HTML/CSS
+* Semantic UI
+* Cloudinary
+* Stripe API
 
+## Tools
+* [Rack CORS](https://github.com/cyu/rack-cors)
+* [ActiveModel::Serializer](https://github.com/rails-api/active_model_serializers)
 
 
