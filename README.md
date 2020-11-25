@@ -32,7 +32,7 @@ Boutique de Chocolat is an e-commerce application that allows users to purchase 
 ### ActiveRecord Associations
 * There are 4 models with `has_many`, `belongs_to` and `has_many through` associations
 ### Domain Model
-<img src='./image/Chocolat_ERD.png'> </img>
+<img src='./image/chocolat_ERD.png'> </img>
 
 
 This README would normally document whatever steps are necessary to get the
