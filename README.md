@@ -29,6 +29,11 @@ Boutique de Chocolat is an e-commerce application that allows users to purchase 
 4. Last step, launch the rails server!
     ```$ rails s -p 3000```
 
+### ActiveRecord Associations
+* There are 4 models with `has_many`, `belongs_to` and `has_many through` associations
+### Domain Model
+<img src='./image/Chocolat_ERD.png'> </img>
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
