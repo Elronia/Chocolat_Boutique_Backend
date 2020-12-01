@@ -1,5 +1,5 @@
 # README
-# Chocolat_Boutique_Frontend
+# Chocolat_Boutique_Backend
 This is the Ruby on Rails API for Boutique de Chocolat.
 Boutique de Chocolat is an e-commerce application that allows users to purchase handcrafted chocolate treats. Application is built with React on the frontend and Ruby on Rails on the backend.
 
