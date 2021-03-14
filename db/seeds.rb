@@ -22,10 +22,10 @@ user01 = User.create(
     password: "abc123",#$2a$12$8RkmJ7ycgrQGUSTk033tNuXsNLf1Mb4.TK6i/OKyVVhnla3qZaVdO
     first_name: "Ekaterina",
     last_name: "Zarudnaya",
-    address: "253 5th Street",
+    address: "253 5th Ave",
     city: "New York",
     state: "NY",
-    zip: 10016,
+    zip: 10017,
     phone: "212-777-7777",
     email: "katherine@gmail.com")
 
